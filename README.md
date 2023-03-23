@@ -1,10 +1,10 @@
 # RANDOM PASSWORD GENERATOR
 by LeShush
 
-##LINK
-###ACCES LIVE DEMO HERE
+## LINK
+## #ACCES LIVE DEMO HERE
 
-##DESCRIPTION
+## DESCRIPTION
 This code allows to create a secure password for different security criterias (types of character, numbers, etc). 
 Designed using Javascript
 
