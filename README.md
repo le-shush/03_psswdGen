@@ -2,7 +2,7 @@
 by LeShush
 
 ## LINK
-## #ACCES LIVE DEMO HERE
+### ACCESS LIVE DEMO HERE
 
 ## DESCRIPTION
 This code allows to create a secure password for different security criterias (types of character, numbers, etc). 
