@@ -106,8 +106,10 @@ function writePassword() {
     var passwordText = document.querySelector("#password");
 
     passwordText.value = psswd + "\n \nTo create a new one please refresh the tab. \nYou can do this by pressing F5.";
-   
-    buttonClicked = true;
+}
+
+function refreshPage() {
+  window.refreshPage();
 }
 
 // Add event listener to generate button
