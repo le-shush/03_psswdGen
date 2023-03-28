@@ -4,21 +4,6 @@ var charUser = "";
 var password = "";
 
 
-/*
-function promptCriteria() {
-  var inputString = window.prompt("Write down, separated by commas, the number of the elements you want your password to have: \n1) Lowercase \n2) Uppercase \n3) Numeric \n4) Special Characters", "1, 2, 3");
-  console.log("Input String: " + inputString);
-  // Change value into a usable array
-  const numberStrings = inputString.split(",");
-  console.log("Number Strings: " + numberStrings);
-  const numbers = numberStrings.map(str => Number(str));
-  console.log("numbers: " + numbers);
-  var charString = numbers.toString();
-  console.log("charsSting: " + charString);
-  return charString;
- // console.log(typeof numbers);
-} */
-
 function promptCriteria() {
   
 // Define variables containing the strings to concatenate
