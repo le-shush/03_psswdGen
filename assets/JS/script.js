@@ -1,6 +1,5 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-
 var charUser = "";
 var password = "";
 
@@ -21,11 +20,18 @@ function promptCriteria() {
 } */
 
 function promptCriteria() {
+  
+// Define variables containing the strings to concatenate
+  const char = "abcdefghijklmnopqrstuvwxyz";
+  const charMay = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const charNum = "0123456789";
+  const charSpec = ` !"#$%&'()*+,-./:;<=>?@[]^_{|}~`;
+
 // Define an array containing the options
-const options = ["Option 1", "Option 2", "Option 3", "Option 4"];
+const options = [char, charMay, charNum, charSpec];
 
 // Prompt the user to select one or several options by their number
-const input = prompt("Please select one or several options by their number, separated by commas: 1. Option 1, 2. Option 2, 3. Option 3, 4. Option 4");
+const input = prompt("Write down, separated by commas, the number of the elements you want your password to have: \n1) Lowercase \n2) Uppercase \n3) Numeric \n4) Special Characters", "1,2,3");
 
 // Split the input value into an array of selected option numbers
 const selectedOptionNumbers = input.split(",").map(optionNumber => parseInt(optionNumber.trim()) - 1);
@@ -35,6 +41,8 @@ const selectedOptions = selectedOptionNumbers.map(optionNumber => options[option
 
 // Log the selected options to the console
 console.log(selectedOptions);
+
+return selectedOptions;
 }
 
 
@@ -45,43 +53,34 @@ function psswdLength() {
     alert("Please enter a valid length");
     psswdLength(); //ask again
   }
-  console.log(pLength);
+
+  console.log("Password length: " + pLength);
+  return pLength;
 }
 
 
 // Creates a string of characters from a list
-function randomGenerator (list, length) {
-    for (var i = 0; i <= length; i++) {
-        var randomNumber = Math.floor(Math.random() * list.length);
-        password += list.substring(randomNumber, randomNumber + 1);
+function randomGenerator (charList, length) {
+    for (var i = 0; i < length; i++) { // if you use =< you get one character extra
+        var randomNumber = Math.floor(Math.random() * charList.length);
+        password += charList.substring(randomNumber, randomNumber + 1);
        } 
-       //return password;
+       return password;
 } 
 
 
-function concatenateStrings(selectedValues) {
-  // Define variables containing the strings to concatenate
-  const char = "abcdefghijklmnopqrstuvwxyz";
-  const charMay = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  const charNum = "0123456789";
-  const charSpec = ` !"#$%&'()*+,-./:;<=>?@[]^_{|}~`;
-
-  // Define an array containing the variables that hold the strings to concatenate
-  const stringVariables = [char, charMay, charNum, charSpec];
+function concatenateStrings(array) {
 
   // Define a variable to hold the concatenated string
   let result = "";
 
-  // Concatenate the strings based on the length of the selectedValues array
-  for (let i = 0; i < selectedValues.length; i++) {
-    const index = selectedValues[i] - 1;
-    if (index >= 0 && index < stringVariables.length) {
-      result += stringVariables[index];
-    }
-  }
-
+  // Concatenate the array of pre-selected values of the array
+  result = array.join(``);
+  console.log("Resulting string: " + result);
+  
   // Return the concatenated string
   return result;
+
 }
 
 
@@ -91,39 +90,28 @@ function generatePassword() {
 
   var pCriteria = promptCriteria();
   var pLength = psswdLength();
+  var concatString = concatenateStrings(pCriteria);
 
   // Begins the generation process
+  var mainPassword = randomGenerator(concatString, pLength);
+  console.log("Main Password: " + mainPassword);
+  return mainPassword;
 
-  if (pCriteria.includes(`1`)) {
-    charUser = charUser.concat(char);
-    console.log("minusc: " + charUser);
-
-  } else if (pCriteria.includes(`2`)) {
-    charUser = charUser.concat(charMay);
-    console.log("Mayusc: " + charUser);
-
-  } else if (pCriteria.includes(`3`)) {
-    charUser = charUser.concat(charNum);
-    console.log("Num: " + charUser);
-
-  } else if (pCriteria.includes(`4`)) {
-    charUser = charUser.concat(charSpec);
-    console.log("Special Char: " + charUser);
-  }
-
-  randomGenerator(charUser, pLength);
-  //return randomGenerator.password;
+  
 } 
 
 // Write password to the #password input
 function writePassword() {
-  var psswd = generatePassword(password);
-  var passwordText = document.querySelector("#password");
+    var psswd = generatePassword();
+    var passwordText = document.querySelector("#password");
 
-  passwordText.value = psswd;
-  
-
+    passwordText.value = psswd + "\n \nTo create a new one please refresh the tab. \nYou can do this by pressing F5.";
+   
+    buttonClicked = true;
 }
 
 // Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword);
+
+
