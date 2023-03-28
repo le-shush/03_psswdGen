@@ -12,7 +12,9 @@ This code was refactored from an original used in the Fullstack Coding Bootcamp 
 23/03/2023
 
 ## SCREENSHOTS
-                                                                                    
+![image](https://user-images.githubusercontent.com/126521180/228107091-deec3bbf-5660-4056-ac57-bf011c6f8c71.png)
+![image](https://user-images.githubusercontent.com/126521180/228107194-ad1643e8-778d-4584-9647-ee874793b400.png)
+                                                                                   
 
 # User Story
 AS AN employee with access to sensitive data
