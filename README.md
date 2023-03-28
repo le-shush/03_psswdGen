@@ -13,6 +13,8 @@ This code was refactored from an original used in the Fullstack Coding Bootcamp 
 
 ## SCREENSHOTS
 ![image](https://user-images.githubusercontent.com/126521180/228107091-deec3bbf-5660-4056-ac57-bf011c6f8c71.png)
+![image](https://user-images.githubusercontent.com/126521180/228108274-94151bb5-39a2-4feb-b9db-e13d6d4fe808.png)
+
 ![image](https://user-images.githubusercontent.com/126521180/228107194-ad1643e8-778d-4584-9647-ee874793b400.png)
                                                                                    
 
