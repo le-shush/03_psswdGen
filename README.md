@@ -2,7 +2,7 @@
 by LeShush
 
 ## LINK
-### ACCESS LIVE DEMO HERE
+[### ACCESS LIVE DEMO HERE](https://le-shush.github.io/03_psswdGen/)
 
 ## DESCRIPTION
 This code allows to create a secure password for different security criterias (types of character, numbers, etc). 
