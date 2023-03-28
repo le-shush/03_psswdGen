@@ -9,6 +9,8 @@ This code allows to create a secure password for different security criterias (t
 Designed using Javascript
 
 This code was refactored from an original used in the Fullstack Coding Bootcamp of Tec de Monterrey.
+
+ChatGPT was used as a way to obtain advise on code to use for specific purposes. All code given by chatGPT was refactored and editted to fit into the intended result.
 23/03/2023
 
 ## SCREENSHOTS
