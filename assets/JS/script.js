@@ -3,7 +3,6 @@ var generateBtn = document.querySelector("#generate");
 var charUser = "";
 var password = "";
 
-
 // Define function for selection of types of characters
 function promptCriteria() {
   
@@ -85,8 +84,10 @@ function generatePassword() {
 function writePassword() {
     var psswd = generatePassword();
     var passwordText = document.querySelector("#password");
+    var addedText = document.querySelector("#added-text");
 
-    passwordText.value = psswd + "\n \nTo create a new one please refresh the tab. \nYou can do this by pressing F5.";
+    passwordText.value = psswd;
+    addedText.textContent = "To create a new one please refresh the tab. \nYou can do this by pressing F5.";
 }
 
 function refreshPage() {
