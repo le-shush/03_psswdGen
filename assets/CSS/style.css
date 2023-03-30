@@ -6,10 +6,15 @@
 
 :root {
   --dark: ;
-  --medium-dark: ;
-  --main: ;
-  --medium-light: ;
-  --light: ;
+  --medium-dark: rgb(58,47,48);
+  --main: rgb(158,39,18);
+  --medium-light: rgb(169,161,144);
+  --light: rgb(235,233,219);
+}
+
+::selection {
+  background-color: var(--light);
+  color: var(--main);
 }
 
 html,
@@ -25,7 +30,7 @@ body {
   font-family: "apolline", serif;
   font-weight: 800;
   font-style: italic;
-  background-color: #f9fbfd;
+  background-color: var(--medium-light);
 }
 
 .wrapper {
@@ -38,15 +43,15 @@ header {
   text-align: center;
   padding: 20px;
   padding-top: 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--main);
 }
 
 .card {
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--light);
   border-radius: 5px;
   border-width: 1px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
+  color: var(--medium-dark);
   font-size: 18px;
   margin: 0 auto;
   max-width: 800px;
@@ -73,7 +78,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: var(--light);
   height: 2px;
 }
 
@@ -85,11 +90,11 @@ header {
 
 .btn {
   border: none;
-  background-color: hsl(360, 91%, 36%);
+  background-color: var(--main);
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
     0px;
-  color: hsl(0, 0%, 100%);
+  color: var(--light);
   display: inline-block;
   font-size: 22px;
   line-height: 22px;
@@ -102,6 +107,18 @@ header {
 button[disabled] {
   cursor: default;
   background: #c0c7cf;
+  
+}
+
+button:hover {
+  outline: 2px var(--light);
+  outline-offset: -2px;
+  transition: all 0.5s ease-in-out;
+}
+
+button:hover,
+button:hover .btn {
+  box-shadow: inset 0px 0px 8px var(--main), 0 0 15px var(--main);
 }
 
 .float-right {
@@ -119,7 +136,7 @@ button[disabled] {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -127,7 +144,9 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+  
 }
+
 
 @media (max-width: 690px) {
   body {

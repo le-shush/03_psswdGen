@@ -3,6 +3,8 @@ var generateBtn = document.querySelector("#generate");
 var charUser = "";
 var password = "";
 
+var textArea = document.querySelector('#password');
+
 // Define function for selection of types of characters
 function promptCriteria() {
   
@@ -90,11 +92,13 @@ function writePassword() {
     addedText.textContent = "To create a new one please refresh the tab. \nYou can do this by pressing F5.";
 }
 
-function refreshPage() {
-  window.refreshPage();
-}
-
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+textArea.addEventListener("click", function() {
+  this.select();
+});
+
+
 
 
