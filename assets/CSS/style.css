@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --dark: ;
+  --medium-dark: ;
+  --main: ;
+  --medium-light: ;
+  --light: ;
+}
+
 html,
 body,
 .wrapper {
@@ -13,7 +21,10 @@ body,
 }
 
 body {
-  font-family: sans-serif;
+  font-size: 3vw;
+  font-family: "apolline", serif;
+  font-weight: 800;
+  font-style: italic;
   background-color: #f9fbfd;
 }
 
@@ -119,6 +130,10 @@ button[disabled] {
 }
 
 @media (max-width: 690px) {
+  body {
+    font-size: 4vw;
+  }
+  
   .btn {
     font-size: 1rem;
     margin: 16px 0px 0px 0px;
@@ -131,6 +146,9 @@ button[disabled] {
 }
 
 @media (max-width: 500px) {
+  body {
+    font-size: 5vw;
+  }
   .btn {
     font-size: 0.8rem;
   }

@@ -4,6 +4,7 @@ var charUser = "";
 var password = "";
 
 
+// Define function for selection of types of characters
 function promptCriteria() {
   
 // Define variables containing the strings to concatenate
@@ -11,19 +12,16 @@ function promptCriteria() {
   const charMay = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const charNum = "0123456789";
   const charSpec = ` !"#$%&'()*+,-./:;<=>?@[]^_{|}~`;
-
 // Define an array containing the options
 const options = [char, charMay, charNum, charSpec];
-
 // Prompt the user to select one or several options by their number
-const input = prompt("Write down, separated by commas, the number of the elements you want your password to have: \n1) Lowercase \n2) Uppercase \n3) Numeric \n4) Special Characters", "1,2,3");
-
+const input = prompt("Write down, separated by commas, the number of the " +
+"elements you want your password to have: \n1) Lowercase \n2) Uppercase \n3) " +
+"Numeric \n4) Special Characters", "1,2,3"); 
 // Split the input value into an array of selected option numbers
 const selectedOptionNumbers = input.split(",").map(optionNumber => parseInt(optionNumber.trim()) - 1);
-
 // Map the selected option numbers to their corresponding option values
 const selectedOptions = selectedOptionNumbers.map(optionNumber => options[optionNumber]);
-
 // Log the selected options to the console
 console.log(selectedOptions);
 
@@ -58,11 +56,9 @@ function concatenateStrings(array) {
 
   // Define a variable to hold the concatenated string
   let result = "";
-
   // Concatenate the array of pre-selected values of the array
   result = array.join(``);
   console.log("Resulting string: " + result);
-  
   // Return the concatenated string
   return result;
 
@@ -98,7 +94,6 @@ function refreshPage() {
 }
 
 // Add event listener to generate button
-
 generateBtn.addEventListener("click", writePassword);
 
 
